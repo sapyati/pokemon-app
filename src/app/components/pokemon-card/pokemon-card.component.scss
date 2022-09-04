@@ -1,0 +1,114 @@
+.card {
+  border: 2px solid #bc5d4d;
+  border-radius: 4px;
+  &__top {
+    padding-top: 10px;
+    background-color: #fbe9ad;
+    h3 {
+      font-size: 24px;
+      text-align: center;
+      padding-bottom: 10px;
+      font-family: "Bubblegum Sans", cursive;
+    }
+    h3::first-letter {
+      text-transform: capitalize;
+    }
+    img {
+      display: block;
+      margin: auto;
+      height: 125px;
+    }
+  }
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h3 {
+      font-size: 16px;
+    }
+  }
+  &__stats,
+  &__ability {
+    height: 115px;
+    padding: 10px;
+    flex-basis: 50%;
+    font-size: 14px;
+  }
+  &__stats {
+    background: #156175;
+    h3 {
+      font-size: 12px;
+      font-weight: bold;
+      margin-bottom: 5px;
+      text-transform: uppercase;
+    }
+    li {
+      font-size: 12px;
+      line-height: 24px;
+    }
+    li,
+    h3 {
+      color: #fff;
+    }
+  }
+  &__ability {
+    background: #6180ab;
+    h3 {
+      font-size: 12px;
+      font-weight: bold;
+      margin-bottom: 5px;
+      text-transform: uppercase;
+    }
+    li {
+      font-size: 12px;
+    }
+    li::first-letter {
+      text-transform: capitalize;
+      line-height: 24px;
+    }
+    li,
+    h3 {
+      color: #fff;
+    }
+  }
+  &__footer {
+    button {
+      padding: 10px;
+      width: 100%;
+      border: none;
+      text-transform: uppercase;
+      font-weight: 800;
+      letter-spacing: 1px;
+      color: #46735c;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+      background-color: #f0f0f0;
+    }
+  }
+}
+
+@media only screen and (max-width: 1034px) {
+  .card {
+    &__bottom {
+      flex-wrap: wrap;
+    }
+    &__stats,
+    &__ability {
+      height: auto;
+      flex-basis: 100%;
+      li {
+        display: inline-block;
+        margin-right: 20px;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 480px) {
+}
+
+@media all and (min-width: 481px) and (max-width: 640px) {
+}
+
+@media all and (min-width: 640px) and (max-width: 820px) {
+}

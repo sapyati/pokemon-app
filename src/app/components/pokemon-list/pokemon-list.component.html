@@ -1,0 +1,38 @@
+<div class="action">
+    <div class="action__search">
+        <select name="pageSize" (change)="handleSearchBy($event)">
+            <option *ngFor="let opt of searchOptions">
+                {{opt}}
+            </option>
+        </select>
+        <input type="text" [(ngModel)]="searchTerm" placeholder="Type here to search...">
+        <button>Search</button>
+    </div>
+    <div class="action__sort">
+        Sort By :
+        <button type="button" (click)="sortByName()">Name</button>
+        <button type="button" (click)="sortByHeight()">Height</button>
+        <button type="button" (click)="sortByWeight()">Weight</button>
+    </div>
+    <div class="action__size">
+        Size
+        <select name="pageSize" (change)="handlePageSize($event)">
+            <option *ngFor="let opt of sizeOptions">
+                {{opt}}
+            </option>
+        </select>
+    </div>
+    <div class="action__next-prev">
+        <button [disabled]="!prevUrl" type="button" class="btn" (click)="getPrevPokemons()">Prev Page</button>
+        <button type="button" class="btn" (click)="getNextPokemons()">Next Page</button>
+    </div>
+</div>
+<div class="list">
+    <app-pokemon-card *ngFor="let pokemon of pokemons |searchBy: searchKey : searchTerm| sortBy: sortKey : sortOrder"
+        [pokemon]="pokemon">
+    </app-pokemon-card>
+</div>
+<div class="action__next-prev bottom">
+    <button [disabled]="!prevUrl" type="button" class="btn" (click)="getPrevPokemons()">Prev Page</button>
+    <button type="button" class="btn" (click)="getNextPokemons()">Next Page</button>
+</div>

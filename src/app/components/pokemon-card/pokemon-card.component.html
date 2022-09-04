@@ -1,0 +1,24 @@
+<div class="card">
+    <div class="card__top">
+        <img src="{{imgUrl}}" alt="">
+        <h3>{{pokemon.name}}</h3>
+    </div>
+    <div class="card__bottom">
+        <div class="card__stats">
+            <h3>Physical Stats</h3>
+            <ul>
+                <li>Height: {{pokemon.height}}</li>
+                <li>Weight: {{pokemon.weight}}</li>
+            </ul>
+        </div>
+        <div class="card__ability">
+            <h3>Abilities</h3>
+            <ul>
+                <li *ngFor="let data of pokemon.abilities">{{data.ability.name}}</li>
+            </ul>
+        </div>
+    </div>
+    <div class="card__footer">
+        <button type="button" (click)="showDetails(pokemon.id)">View More Details</button>
+    </div>
+</div>

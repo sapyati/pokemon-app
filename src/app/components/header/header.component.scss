@@ -1,0 +1,17 @@
+header {
+  min-height: 60px;
+  background-color: #85c776;
+  padding: 10px 10px 0px 10px;
+  display: flex;
+  img {
+    display: inline-block;
+    height: 40px;
+  }
+  h3 {
+    display: inline-block;
+    font-family: "Bubblegum Sans", cursive;
+    margin-left: 20px;
+    color: #316ab3;
+    padding-top: 10px;
+  }
+}
